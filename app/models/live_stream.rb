@@ -22,4 +22,8 @@
 #
 
 class LiveStream < ApplicationRecord
+  belongs_to :user, class_name: 'TwitcasUser', foreign_key: :twitcas_user_id
+
+  enum state: [:stay, :standby, :playing, :finish]
+  has_many :comments, class_name: 'LiveStreamComment', foreign_key: :live_stream_id
 end
