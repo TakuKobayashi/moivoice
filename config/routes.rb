@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
-  resource :oauth, controller: :oauth, only: [] do
-    get 'twitcas_auth'
-    get 'twitcas_callback'
+  resources :oauth do
+    collection do
+      get 'twitcas_auth'
+      get 'twitcas_callback'
+    end
   end
 
-  resource :top, controller: :top, only: [] do
-    get 'page'
+  resources :streaming do
+    collection do
+      get 'play'
+      post 'hook'
+    end
   end
 
-  resource :streaming, controller: :streaming, only: [] do
-    get 'play'
-    post 'hook'
-  end
+  root to: "top#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

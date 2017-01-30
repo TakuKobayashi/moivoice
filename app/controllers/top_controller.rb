@@ -1,4 +1,4 @@
 class TopController < BaseController
-  def page
+  def index
   end
 end

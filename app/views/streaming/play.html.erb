@@ -9,7 +9,7 @@
   }
   var create_room = function(){
     var command = {command: "subscribe"}
-    var channel_params = {channel: "StreamingChannel", stream_id: <%= @live_straem.id %>}
+    var channel_params = {channel: "StreamingChannel", stream_id: <%= 1 %>}
     command["identifier"] = JSON.stringify(channel_params);
     ws.send(JSON.stringify(command));
   }
@@ -26,6 +26,6 @@
   <h2>配信中</h2>
   <ul id="list"></ul>
   <ul class="btn_s">
-    <li><%= link_to("エンド", page_moi_voice_top_path) %></li>
+    <li><%= link_to("エンド", root_path) %></li>
   </ul>
 </div>
