@@ -44,6 +44,8 @@ gem 'timers'
 #OpenShift Online用
 gem 'rhc'
 
+gem "bower-rails", "~> 0.11.0"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -47,6 +47,7 @@ GEM
       rake (>= 0.8.7)
     archive-tar-minitar (0.5.2)
     arel (7.1.4)
+    bower-rails (0.11.0)
     buftok (0.2.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -273,6 +274,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-import
   annotate
+  bower-rails (~> 0.11.0)
   byebug
   coffee-rails (~> 4.2)
   eventmachine
