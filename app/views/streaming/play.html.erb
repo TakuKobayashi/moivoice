@@ -1,6 +1,14 @@
 <script>
   var url = window.location.href
   var host = window.document.location.host;
+
+  var synthes = new SpeechSynthesisUtterance(
+    '日本語のテキストを認識させるには、lang 属性に ja-JP を指定します。'
+  );
+  synthes.lang = "ja-JP"
+  // 音声再生
+  speechSynthesis.speak(synthes);
+
   var ws;
   if(url.startsWith("https://")){
     ws = new WebSocket('wss://' + host + "/cable");
