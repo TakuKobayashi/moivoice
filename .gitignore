@@ -10,8 +10,6 @@
 db/*.mysql3
 
 coverage/
-config/database.yml
-config/secrets.yml
 config/apiconfig.yml
 
 .ruby-gemset
