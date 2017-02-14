@@ -29,7 +29,9 @@ test:
 
 production:
   <<: *default
-  database: moivoice
-  host: 10.1.86.111
-  username: taku
-  password: 7PdJA57j
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  host:     <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port:     <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+  soket:    <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
