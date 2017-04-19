@@ -45,6 +45,7 @@ gem 'timers'
 gem 'rhc'
 
 gem "bower-rails", "~> 0.11.0"
+gem "firebase"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
