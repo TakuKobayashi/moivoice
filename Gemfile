@@ -41,10 +41,6 @@ gem 'eventmachine'
 gem 'faye-websocket'
 gem 'timers'
 
-#OpenShift Online用
-gem 'rhc'
-
-gem "bower-rails", "~> 0.11.0"
 gem "firebase"
 
 # Use Capistrano for deployment
