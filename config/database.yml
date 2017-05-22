@@ -1,35 +1,22 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 default: &default
   adapter: mysql2
   pool: 5
   timeout: 5000
   encoding: utf8
+  username: root
+  password:
 
 development:
   <<: *default
-  database: moivoice
-  host: localhost
-  username: root
-  password:
+  database: moivoice_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: moivoice
-  host: localhost
-  username: root
-  password:
+  database: moivoice_test
 
 production:
   <<: *default
-  database: <%=ENV['OPENSHIFT_APP_NAME']%>
-  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
-  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
-  host:     <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  database: moivoice_production
